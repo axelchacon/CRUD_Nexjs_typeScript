@@ -1,5 +1,6 @@
 import "./global.css";
 import { Metadata } from "next";
+import Link from "next/link";
 
 // export const metadata = {
 // 	title: "Next.js",
@@ -22,7 +23,15 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<header>Cabecera</header>
+				<header>
+					<h2>Cabecera de la app</h2>
+					<nav>
+						<Link href="/">Home</Link>-<Link href="/acerca">Acerca</Link>-
+						<Link href="/contacto">Contacto</Link>-
+						<Link href="/productos">Productos</Link>
+						<Link href="/login">Login</Link>
+					</nav>
+				</header>
 				<main>{children}</main>
 				<footer> Este es el footer</footer>
 			</body>
